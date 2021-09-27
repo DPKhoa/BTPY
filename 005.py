@@ -51,7 +51,7 @@ except:
     print("bạn đã nhập sai ")'''
 
 #bài 10 input ouput +11
-try:
+'''try:
     with open('input.inp','r', encoding='utf8') as fileInp:
         ten = fileInp.readline().rstrip('\n')#bỏ các kí tự xuống dòng
         tuoi = int(fileInp.readline())
@@ -63,4 +63,12 @@ except FileExistsError:
 except FileNotFoundError:
     print("filenotfound")
 except:
-    print('Dinh dang k hop le!')
+    print('Dinh dang k hop le!')'''
+#bài 12
+with open('inputN.inp','r',encoding='utf8') as fileInp:
+        data = fileInp.readlines()
+        print(data)
+        stringJoined = ' '.join(data).replace('\n',' ')
+        print(stringJoined)
+fileOut = open('output.out','wb')
+fileOut.write(stringJoined.encode('utf8'))
